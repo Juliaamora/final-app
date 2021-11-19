@@ -11,6 +11,18 @@
                 <div class="p-6 bg-white border-b border-gray-200">
                     You're logged in!
                 </div>
+                <div class="p-6 bg-white border-b border-gray-200">
+                    <form>
+                        <div>
+                            <input type="search">
+                            <label for="search">Suche Bücher</label>
+                        </div>
+                        <button>Suche starten</button>
+                    </form>
+                </div>
+                <div class="p-6 bg-white border-b border-gray-200">
+                    
+                </div>
             </div>
         </div>
     </div>

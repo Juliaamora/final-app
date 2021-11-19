@@ -1,3 +1,32 @@
+MVC
+    • kann zur Strukturierung von Programmen genutzt werden
+    • Trennung von Funktionalitäten
+    • kollaboratives Arbeiten
+    • bessere Verständlichkeit des Quellcodes
+    • schneller wartbare Anwendungen
+    • wiederverwendbare Komponenten
+Model (Datenmodell)
+    • enthält datenbezogene Logik
+    • interagiert mit Datenbank
+    • wird vom Controller gesteuert
+Controller (Programmsteuerung)
+    • erhält Input des Users
+    • verarbeitet Requests(GET, POST, DELTE…)
+    • erhält Daten vom Model
+    • übergibt Daten an View
+    • Bindeglied zwischen View und Model
+View (Darstellung)
+    • enthält was der spätere Nutzer sieht
+    • HTML & CSS
+    • Kommuniziert ebenfalls mit dem Controller
+    • dynamische Werte
+    • Template Engine
+Blade Template Engine
+    @import-> fügt eine Template-Datei hinzu
+    @section-> definiert eine Sektion die später importiert werden kann
+    @yield-> importiert eine zuvor definierte Sektion
+    @extends-> erbt von einem Template
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
