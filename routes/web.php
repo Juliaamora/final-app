@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\SearchBookController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,11 +13,14 @@ use App\Http\Controllers\PostController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::resource('dashboard', SearchBoockController::class);
+Route::resource('search', SearchBookController::class);
 Route::resource('posts', PostController::class);
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/search', function () {
+    return view('search.search');
+})->middleware(['auth'])->name('search');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
