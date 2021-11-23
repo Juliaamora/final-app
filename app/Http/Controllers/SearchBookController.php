@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Search;
+use App\Models\Searchterm;
 use Illuminate\Http\Request;
 use Goutte\Client;
 use GuzzleHttp\Client as GuzzleClient;
@@ -26,39 +27,29 @@ class SearchBookController extends Controller
 
         //$results = Http::Http::get('https://www.lovelybooks.de/mapi/search/detail/books?q=codex%20alera&size=6&page=0');
 
-    return view('search.search', compact('searchterm'));
+        return view('search.search', compact('searchterm'));
     }
 
     public function index()
-    {
-        
+    {     
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    //@return \Illuminate\Http\Response
     public function create()
     {
-        //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+    // @param  \Illuminate\Http\Request  $request
+     // @return \Illuminate\Http\Response
+
     public function store(Request $request)
     {
-        $request->validate([
-            'term' => 'required',
-        ]);
-
-        Searchterm::create($request->all());
-
-        return view('search.search', compact('term'));
+        $search_input = array(
+            'term' => $request->searchterm,
+        );
+        Searchterm::create($search_input);
+        $shownTerm = json_encode($search_input);
+        return redirect()->route('search')
+                        ->with('success','Ergebnisse für: '.$shownTerm);
     }
 
     /**
@@ -67,9 +58,10 @@ class SearchBookController extends Controller
      * @param  \App\Models\Search  $search
      * @return \Illuminate\Http\Response
      */
-    public function show(Search $search)
+    
+     public function show(Search $search)
     {
-        //
+        //return view('search.search',compact('search'));
     }
 
     /**

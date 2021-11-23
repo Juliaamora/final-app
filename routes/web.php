@@ -18,12 +18,14 @@ Route::resource('posts', PostController::class);
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/search', function () {
-    return view('search.search');
-})->middleware(['auth'])->name('search');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
+
+Route::get('/search', function () {
+    return view('search.search');
+})->middleware(['auth'])->name('search');
 
 require __DIR__.'/auth.php';

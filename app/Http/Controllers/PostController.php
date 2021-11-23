@@ -40,7 +40,10 @@ class PostController extends Controller
     {
          $request->validate([
             'title' => 'required',
+            'author' => 'required',
             'description' => 'required',
+            'rating' => 'required',
+            'comment' => 'required',
         ]);
     
         Post::create($request->all());
@@ -82,7 +85,10 @@ class PostController extends Controller
     {
         $request->validate([
             'title' => 'required',
+            'author' => 'required',
             'description' => 'required',
+            'rating' => 'required',
+            'comments' => 'required',
         ]);
     
         $post->update($request->all());

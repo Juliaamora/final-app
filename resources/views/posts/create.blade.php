@@ -35,8 +35,26 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
+                <strong>Author:</strong>
+                <input type="text" name="author" class="form-control" placeholder="Enter Author">
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
                 <strong>Description:</strong>
                 <textarea class="form-control" style="height:150px" name="description" placeholder="Enter Description"></textarea>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Rating:</strong>
+                <input type="text" name="rating" class="form-control" placeholder="1-5">
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Comment:</strong>
+                <input type="text" name="comment" class="form-control" placeholder="Enter Comment">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
