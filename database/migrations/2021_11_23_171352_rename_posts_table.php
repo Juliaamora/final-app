@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSearchtermsTable extends Migration
+class RenamePostsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,7 @@ class CreateSearchtermsTable extends Migration
      */
     public function up()
     {
-        Schema::create('searchterms', function (Blueprint $table) {
-            $table->id();
-            $table->string('term');
-            $table->timestamps();
-        });
+        Schema::rename('posts', 'books');
     }
 
     /**
@@ -27,7 +23,6 @@ class CreateSearchtermsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('searchterms');
+        Schema::rename('books', 'posts');
     }
-    
 }

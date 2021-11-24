@@ -14,10 +14,11 @@ class PostController extends Controller
      */
     public function index()
     {
-        $data = Post::latest()->paginate(5);
     
+        $data = Post::latest()->paginate(5);
         return view('posts.index',compact('data'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
+
     }
 
     /**
