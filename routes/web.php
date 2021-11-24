@@ -28,4 +28,6 @@ Route::get('/search', function () {
     return view('search.search');
 })->middleware(['auth'])->name('search');
 
+Route::post('/postadd', 'PostController@store');
+
 require __DIR__.'/auth.php';

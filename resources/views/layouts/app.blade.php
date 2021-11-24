@@ -31,7 +31,7 @@
             <!-- Page Content -->
             <main>
                 {{ $slot }}
-            </main>
+            </main>    
         </div>
     </body>
 </html>

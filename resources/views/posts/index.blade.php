@@ -4,7 +4,11 @@
     <div class="row" style="margin-top: 5rem;">
         <div class="col-lg-12 margin-tb">
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('posts.create') }}"> Create New Post</a>
+                <!-- <a class="btn btn-success" href="{{ route('posts.create') }}"> Create New Post</a> -->
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createBookModal">
+                    Add Book
+                </button>
             </div>
         </div>
     </div>
@@ -50,4 +54,6 @@
 
 <button id="hide">Hide</button>
 <button id="show">Show</button>
+
+@include('posts.create')
 @endsection

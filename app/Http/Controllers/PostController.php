@@ -14,11 +14,9 @@ class PostController extends Controller
      */
     public function index()
     {
-    
         $data = Post::latest()->paginate(5);
         return view('posts.index',compact('data'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
-
     }
 
     /**
@@ -28,7 +26,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('posts.create');
+        return view('posts.index');
     }
 
     /**
@@ -39,18 +37,28 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-         $request->validate([
+        
+        $books = new Post;
+        $books->title = $request->input('title');
+        $books->author = $request->input('author');
+        $books->description = $request->input('description');
+        $books->rating = $request->input('rating');
+        $books->comment = $request->input('comment');
+        $books->save();
+        
+        /*
+        $request->validate([
             'title' => 'required',
             'author' => 'required',
             'description' => 'required',
             'rating' => 'required',
             'comment' => 'required',
         ]);
-    
         Post::create($request->all());
      
         return redirect()->route('posts.index')
                         ->with('success','Post created successfully.');
+        */
     }
 
     /**
