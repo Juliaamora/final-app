@@ -117,6 +117,6 @@ class PostController extends Controller
         $post->delete();
     
         return redirect()->route('posts.index')
-                        ->with('success','Post deleted successfully');
+                     ->with('success','Post deleted successfully');
     }
 }

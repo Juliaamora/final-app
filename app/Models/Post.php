@@ -15,6 +15,6 @@ class Post extends Model
         'author',
         'description',
         'rating',
-        'comment'
+        'comment',
     ];
 }
