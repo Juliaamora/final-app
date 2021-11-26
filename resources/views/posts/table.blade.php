@@ -18,11 +18,11 @@
             <td>{{ $value->comment }}</td>
             <td>
                 <form action="{{ route('posts.destroy',$value->id) }}" method="POST">   
-                    <a class="btn btn-info" href="{{ route('posts.show',$value->id) }}">Show</a>    
-                    <a class="btn btn-primary" href="{{ route('posts.edit',$value->id) }}">Edit</a>   
+                    <a class="btn btn-outline-info" href="{{ route('posts.show',$value->id) }}">Show</a>    
+                    <a class="btn btn-outline-info" href="{{ route('posts.edit',$value->id) }}">Edit</a>   
                     @csrf
                     @method('DELETE')      
-                    <button type="submit" id="deleteValue" class="btn btn-danger" data-id="{{ $value->id }}">Delete</button>
+                    <button type="submit" id="deleteValue" class="btn btn-outline-danger" data-id="{{ $value->id }}">Delete</button>
                 </form>
             </td>
         </tr>

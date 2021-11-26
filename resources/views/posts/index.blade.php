@@ -4,7 +4,7 @@
     <div class="row" style="margin-top: 5rem;">
         <div class="col-lg-12 margin-tb">
             <div class="pull-right">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createBookModal">
+                <button style="margin: 5px;" type="button" class="btn btn-info" data-toggle="modal" data-target="#createBookModal">
                     Add Book
                 </button>
             </div>

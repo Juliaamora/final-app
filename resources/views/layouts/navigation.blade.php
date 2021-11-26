@@ -5,21 +5,18 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-10 w-auto fill-current text-gray-600" />
+                    <a href="/">
+                    <h1 style="font-size:20px; color:#009172;">Bookly</h1>
                     </a>
                 </div>
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
-                    </x-nav-link>
                     <x-nav-link :href="route('posts.index')" :active="request()->routeIs('posts.index')">
-                        {{ __('Einträge') }}
+                        {{ __('My Books') }}
                     </x-nav-link>
                     <x-nav-link :href="route('search')" :active="request()->routeIs('search')">
-                        {{ __('Buchsuche') }}
+                        {{ __('Booksearch') }}
                     </x-nav-link>
                 </div>
             </div>

@@ -16,7 +16,7 @@
                             <input type="text" name="searchterm" placeholder="Buchtitel..." required>
                             <label for="search">Suche Bücher</label>
                         </div>
-                        <button type="submit" class="btn btn-primary">Suche starten</button>
+                        <button style="margin-top: 20px;" type="submit" class="btn btn-info">Suche starten</button>
                     </form>
                 </div>    
 @endsection
